@@ -5,57 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Meta Tags Básicas de SEO Local -->
-    <title>Doceria Doces Sonhos | Bolos Decorados e Doces em Cuiabá</title>
+    <title>Doceria Doces Sonhos | Bolos Decorados em Cuiabá</title>
     <meta name="description" content="Com açúcar e afeto fazemos o seu doce predileto! Bolos decorados, tortas e doces artesanais sob encomenda em Cuiabá e Várzea Grande. Peça pelo WhatsApp!">
-    <meta name="keywords" content="doceria cuiabá, bolos decorados cuiabá, doces para festa jardim tropical, encomendar bolo várzea grande, doces artesanais, chocotone cuiabá">
-    <meta name="author" content="Doceria Doces Sonhos">
-    
-    <!-- Open Graph (Compartilhamento Instagram/WhatsApp) -->
-    <meta property="og:title" content="Doceria Doces Sonhos | Cuiabá - MT">
-    <meta property="og:description" content="Transformando seus momentos especiais em memórias deliciosas. Bolos e doces por encomenda.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Ícones Lucide -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Ícones Phosphor (Mais arredondados e amigáveis) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
-    <!-- Google Fonts: Quicksand (Arredondada/Moderna) e Dancing Script (Para o lema/toque artesanal) -->
+    <!-- Google Fonts: Nunito (Arredondada/Fofinha) e Pacifico (Cursiva de confeitaria) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
 
-    <!-- Configuração Customizada Tailwind para Doceria -->
+    <!-- Configuração Customizada Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Quicksand', 'sans-serif'],
-                        cursive: ['Dancing Script', 'cursive'],
+                        sans: ['Nunito', 'sans-serif'],
+                        cursive: ['Pacifico', 'cursive'],
                     },
                     colors: {
-                        sweet: {
-                            50: '#fdf2f8',
-                            100: '#fce7f3',
-                            200: '#fbcfe8',
-                            300: '#f9a8d4', // Rosa do logo
-                            400: '#f472b6',
-                            500: '#ec4899', // Rosa principal vibrante
-                            600: '#db2777',
-                            700: '#be185d',
-                            800: '#9d174d',
-                            900: '#831843', // Texto escuro
+                        vanilla: {
+                            DEFAULT: '#FFF5EB', // Fundo principal creme
+                            dark: '#FDECE0',
+                        },
+                        strawberry: {
+                            100: '#FFE4E8',
+                            300: '#FFA1B5',
+                            500: '#FF5C81', // Rosa principal da marca
+                            600: '#E63E65',
                         },
                         choco: {
-                            800: '#452119', // Marrom chocolate
-                            900: '#2b1410',
+                            400: '#7A4737',
+                            500: '#5C3322', // Marrom texto
+                            600: '#422214',
+                            900: '#29140B', // Fundo escuro chocolate
                         }
                     },
                     boxShadow: {
-                        'soft': '0 20px 40px -15px rgba(236, 72, 153, 0.15)',
+                        'sweet': '0 10px 25px -5px rgba(92, 51, 34, 0.15)',
+                        'glow': '0 0 20px rgba(255, 92, 129, 0.4)',
                     }
                 }
             }
@@ -63,166 +56,168 @@
     </script>
     
     <style>
-        body { font-family: 'Quicksand', sans-serif; background-color: #fffafb; color: #452119; }
-        .text-gradient {
-            background: linear-gradient(135deg, #db2777 0%, #f472b6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            background-color: #FFF5EB; 
+            color: #5C3322; 
+            /* Textura super suave de bolinhas para lembrar confeitos */
+            background-image: radial-gradient(#FFE4E8 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
         }
-        .blob-shape {
-            border-radius: 41% 59% 45% 55% / 41% 38% 62% 59%;
-            animation: morph 8s ease-in-out infinite;
+        
+        .bg-wave-pink {
+            background-color: #FF5C81;
+            mask-image: radial-gradient(circle at 10px -5px, transparent 12px, #000 13px);
+            mask-size: 40px 20px;
+            mask-repeat: repeat-x;
+            mask-position: bottom;
         }
-        @keyframes morph {
-            0% { border-radius: 41% 59% 45% 55% / 41% 38% 62% 59%; }
-            50% { border-radius: 65% 35% 72% 28% / 54% 63% 37% 46%; }
-            100% { border-radius: 41% 59% 45% 55% / 41% 38% 62% 59%; }
-        }
-    </style>
 
-    <!-- Schema Markup para SEO Local (Perfeito para o Google Maps novo dela) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Bakery",
-      "name": "Doceria Doces Sonhos",
-      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800",
-      "description": "Com açúcar e afeto fazemos o seu doce predileto! Bolos decorados e doces artesanais em Cuiabá.",
-      "telephone": "+5565992199792",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Avenida Europa, Casa 09 - Quadra 10",
-        "addressLocality": "Cuiabá",
-        "addressRegion": "MT",
-        "postalCode": "78065-130",
-        "addressCountry": "BR"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-          "opens": "08:30",
-          "closes": "18:30"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Friday",
-          "opens": "08:30",
-          "closes": "17:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:30",
-          "closes": "16:00"
+        .box-dashed {
+            border: 2px dashed #FFA1B5;
+            background-color: #FFF;
         }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/docessonhos.tortasedoces/"
-      ]
-    }
-    </script>
+
+        /* Efeito de balanço suave na imagem principal */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        /* Ondas SVG responsivas */
+        .wave-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: translateY(99%);
+            z-index: 10;
+        }
+        .wave-bottom svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 40px;
+        }
+        @media (min-width: 768px) { .wave-bottom svg { height: 70px; } }
+    </style>
 </head>
-<body class="antialiased selection:bg-sweet-300 selection:text-white">
+<body class="antialiased selection:bg-strawberry-500 selection:text-white">
 
     <!-- HEADER -->
-    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-sweet-100 transition-all duration-300">
+    <header class="fixed w-full z-50 bg-vanilla/95 backdrop-blur-md shadow-sm border-b border-strawberry-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 
-                <a href="#" class="flex items-center gap-3">
-                    <!-- Um ícone fofo simulando o logo -->
-                    <div class="w-10 h-10 bg-sweet-100 rounded-full flex items-center justify-center text-sweet-500">
-                        <i data-lucide="cake" class="w-6 h-6"></i>
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-strawberry-100 rounded-full flex items-center justify-center text-strawberry-500 group-hover:scale-110 transition-transform shadow-sm border border-strawberry-300">
+                        <i class="ph-fill ph-cake text-2xl"></i>
                     </div>
                     <div class="flex flex-col">
-                        <span class="font-bold text-xl leading-none text-sweet-700 tracking-tight">Doces Sonhos</span>
-                        <span class="text-[10px] text-sweet-400 font-medium tracking-widest uppercase mt-0.5">Tortas & Doces</span>
+                        <span class="font-cursive text-2xl leading-none text-strawberry-600 mt-1">Doces Sonhos</span>
+                        <span class="text-[10px] text-choco-400 font-bold tracking-widest uppercase mt-0.5">Tortas & Doces</span>
                     </div>
                 </a>
                 
+                <!-- Navegação Desktop -->
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#sobre" class="text-sm font-semibold text-choco-800 hover:text-sweet-500 transition-colors">Quem Somos</a>
-                    <a href="#produtos" class="text-sm font-semibold text-choco-800 hover:text-sweet-500 transition-colors">Nossos Doces</a>
-                    <a href="#encomendas" class="text-sm font-semibold text-choco-800 hover:text-sweet-500 transition-colors">Como Encomendar</a>
+                    <a href="#sobre" class="font-bold text-choco-500 hover:text-strawberry-500 transition-colors">A Doceria</a>
+                    <a href="#produtos" class="font-bold text-choco-500 hover:text-strawberry-500 transition-colors">Nossos Bolos</a>
+                    <a href="#encomendas" class="font-bold text-choco-500 hover:text-strawberry-500 transition-colors">Como Pedir</a>
                 </nav>
 
+                <!-- Botão WhatsApp Desktop -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="text-sweet-400 hover:text-sweet-600 transition-colors">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="text-strawberry-500 hover:text-strawberry-600 transition-colors text-2xl">
+                        <i class="ph-fill ph-instagram-logo"></i>
                     </a>
-                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="bg-sweet-500 hover:bg-sweet-600 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 shadow-[0_4px_14px_rgba(236,72,153,0.3)] flex items-center gap-2">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i> Pedir Orçamento
+                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#1ebd5a] text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:-translate-y-1 shadow-sweet flex items-center gap-2">
+                        <i class="ph-bold ph-whatsapp text-lg"></i> Fazer Orçamento
                     </a>
                 </div>
 
-                <!-- Menu Mobile Botão -->
-                <button id="mobile-menu-btn" class="md:hidden text-choco-800 p-2">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
+                <!-- Botão Menu Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden text-strawberry-600 p-2 bg-strawberry-100 rounded-xl">
+                    <i class="ph-bold ph-list text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Menu Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sweet-100 p-4 space-y-3 shadow-xl absolute w-full">
-            <a href="#sobre" class="mobile-link block px-3 py-2 text-base font-semibold text-choco-800 hover:text-sweet-500 hover:bg-sweet-50 rounded-lg">Quem Somos</a>
-            <a href="#produtos" class="mobile-link block px-3 py-2 text-base font-semibold text-choco-800 hover:text-sweet-500 hover:bg-sweet-50 rounded-lg">Nossos Doces</a>
-            <a href="#encomendas" class="mobile-link block px-3 py-2 text-base font-semibold text-choco-800 hover:text-sweet-500 hover:bg-sweet-50 rounded-lg">Como Encomendar</a>
-            <div class="pt-3 border-t border-sweet-100">
-                <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-sweet-500 hover:bg-sweet-600 text-white px-4 py-3 rounded-xl font-bold">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> Orçamento pelo WhatsApp
+        <div id="mobile-menu" class="hidden md:hidden bg-vanilla border-t border-strawberry-100 p-4 space-y-3 shadow-xl absolute w-full left-0">
+            <a href="#sobre" class="mobile-link block px-4 py-3 text-base font-bold text-choco-500 hover:text-strawberry-500 hover:bg-white rounded-xl">A Doceria</a>
+            <a href="#produtos" class="mobile-link block px-4 py-3 text-base font-bold text-choco-500 hover:text-strawberry-500 hover:bg-white rounded-xl">Nossos Bolos</a>
+            <a href="#encomendas" class="mobile-link block px-4 py-3 text-base font-bold text-choco-500 hover:text-strawberry-500 hover:bg-white rounded-xl">Como Pedir</a>
+            <div class="pt-3 border-t border-strawberry-100">
+                <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebd5a] text-white px-4 py-4 rounded-xl font-bold text-lg shadow-sm">
+                    <i class="ph-bold ph-whatsapp text-xl"></i> Pedir pelo WhatsApp
                 </a>
             </div>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Decorações de fundo -->
-        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sweet-100 via-white to-white -z-10"></div>
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-sweet-200/50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob -z-10"></div>
-        <div class="absolute top-48 -left-24 w-72 h-72 bg-sweet-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000 -z-10"></div>
-
+    <section class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-strawberry-100 overflow-visible">
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
                 
+                <!-- Textos -->
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sweet-100 border border-sweet-200 mb-6">
-                        <i data-lucide="heart" class="w-4 h-4 text-sweet-500 fill-sweet-500"></i>
-                        <span class="text-sweet-700 text-sm font-semibold">Feito com muito amor em Cuiabá</span>
+                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-strawberry-300 mb-6 shadow-sm">
+                        <i class="ph-fill ph-heart text-strawberry-500 text-lg animate-pulse"></i>
+                        <span class="text-strawberry-600 text-sm font-extrabold tracking-wide uppercase">Doceria em Cuiabá - MT</span>
                     </div>
                     
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-choco-900 mb-6">
-                        Com <span class="text-gradient">açúcar e afeto</span>, fazemos o seu doce predileto!
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-choco-600 mb-6 leading-[1.1]">
+                        Transformando <br/>
+                        momentos em <br/>
+                        <span class="font-cursive text-5xl md:text-6xl lg:text-7xl text-strawberry-500 font-normal mt-2 block">Memórias Deliciosas</span>
                     </h1>
                     
-                    <p class="text-lg text-choco-800/80 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                        Transformamos seus momentos especiais em memórias deliciosas. Bolos decorados e doces artesanais feitos com ingredientes premium.
+                    <p class="text-lg md:text-xl text-choco-500/80 mb-8 max-w-lg mx-auto lg:mx-0 font-semibold">
+                        Com açúcar e afeto, fazemos o seu doce predileto! Encomende bolos decorados e doces artesanais feitos com muito capricho.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://wa.me/5565992199792?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="bg-sweet-500 hover:bg-sweet-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_10px_25px_rgba(236,72,153,0.3)] hover:shadow-[0_15px_35px_rgba(236,72,153,0.4)] flex items-center justify-center gap-2 hover:-translate-y-1">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i> Solicitar Orçamento
+                        <a href="https://wa.me/5565992199792?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-8 py-4 rounded-full font-black text-lg transition-all shadow-sweet hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-whatsapp text-2xl"></i> Fazer Encomenda
                         </a>
-                        <a href="#produtos" class="bg-white hover:bg-sweet-50 text-sweet-600 border-2 border-sweet-200 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
-                            Ver Nossos Doces
+                        <a href="#produtos" class="bg-white hover:bg-vanilla text-choco-500 border-2 border-choco-500 px-8 py-4 rounded-full font-black text-lg transition-all flex items-center justify-center gap-2">
+                            Ver Bolos
                         </a>
                     </div>
                 </div>
                 
-                <div class="w-full lg:w-1/2 relative">
-                    <!-- Imagem principal com formato orgânico (blob) -->
-                    <div class="relative w-full max-w-lg mx-auto aspect-square">
-                        <div class="absolute inset-0 bg-sweet-300 blob-shape rotate-12 scale-105 opacity-20"></div>
-                        <div class="absolute inset-0 bg-sweet-400 blob-shape -rotate-6 scale-100 opacity-20"></div>
-                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo decorado artesanal rosa" class="w-full h-full object-cover blob-shape shadow-2xl relative z-10 border-4 border-white">
+                <!-- Imagem Destaque Decorada -->
+                <div class="w-full lg:w-1/2 relative mt-8 lg:mt-0 flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square animate-float">
+                        <!-- Círculo de Fundo -->
+                        <div class="absolute inset-0 bg-strawberry-300 rounded-full scale-105 opacity-30 -translate-x-4 translate-y-4"></div>
+                        <div class="absolute inset-0 bg-white rounded-full scale-100 border-8 border-white shadow-xl overflow-hidden">
+                            <!-- Imagem Substituindo a foto do bolo rosa da cliente -->
+                            <img src="https://images.unsplash.com/photo-1562777717-b6aff5dac6be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo decorado rosa com cobertura" class="w-full h-full object-cover">
+                        </div>
                         
-                        <!-- Badges Flutuantes -->
-                        <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl z-20 flex items-center gap-3 border border-sweet-50 animate-bounce" style="animation-duration: 3s;">
-                            <div class="bg-sweet-100 p-2 rounded-full"><i data-lucide="party-popper" class="w-6 h-6 text-sweet-500"></i></div>
+                        <!-- Badges estilo 'Sticker' -->
+                        <div class="absolute -bottom-2 -left-6 bg-white p-3 rounded-2xl shadow-xl z-20 flex items-center gap-3 border-2 border-strawberry-300 rotate-[-6deg]">
+                            <div class="bg-vanilla p-2 rounded-full"><i class="ph-fill ph-confetti text-2xl text-strawberry-500"></i></div>
                             <div>
-                                <p class="text-choco-900 font-bold text-sm">Festas e Eventos</p>
-                                <p class="text-sweet-500 text-xs font-medium">Personalizados</p>
+                                <p class="text-choco-600 font-extrabold text-sm leading-tight">Aniversários &<br>Mesversários</p>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute top-10 -right-8 bg-white p-3 rounded-2xl shadow-xl z-20 flex items-center gap-3 border-2 border-strawberry-300 rotate-[8deg]">
+                            <div class="bg-vanilla p-2 rounded-full"><i class="ph-fill ph-star text-2xl text-yellow-400"></i></div>
+                            <div>
+                                <p class="text-choco-600 font-extrabold text-sm leading-tight">Ingredientes<br>Premium</p>
                             </div>
                         </div>
                     </div>
@@ -230,244 +225,231 @@
 
             </div>
         </div>
+        
+        <!-- Divisor de Onda SVG -->
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,150.71,101.24,222.36,82.52c33.47-8.73,68.1-18.73,99.03-26.08Z" fill="#FFF5EB"></path>
+            </svg>
+        </div>
     </section>
 
-    <!-- QUEM SOMOS / DESRIÇÃO DO GOOGLE -->
-    <section id="sobre" class="py-20 bg-sweet-50/50">
+    <!-- QUEM SOMOS / A DOCERIA -->
+    <section id="sobre" class="py-24 bg-vanilla relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-[2rem] shadow-soft p-8 md:p-12 lg:p-16 border border-sweet-100 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-sweet-100 rounded-bl-full -z-0 opacity-50"></div>
+            <div class="box-dashed rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sweet relative overflow-hidden">
+                <!-- Decoração cantos -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-strawberry-100 rounded-bl-full -z-0"></div>
+                <div class="absolute bottom-0 left-0 w-24 h-24 bg-vanilla-dark rounded-tr-full -z-0"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="font-cursive text-4xl md:text-5xl text-sweet-500 mb-6 leading-tight">Bem-vindo à Doceria Doces Sonhos!</h2>
-                        <div class="space-y-4 text-choco-800/80 leading-relaxed text-lg">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i class="ph-fill ph-oven text-strawberry-500 text-2xl"></i>
+                            <h2 class="font-extrabold text-strawberry-500 uppercase tracking-widest text-sm">Bem-vindo(a)</h2>
+                        </div>
+                        <h3 class="font-cursive text-4xl md:text-5xl text-choco-600 mb-6 leading-tight">À Doceria Doces Sonhos! 🍰</h3>
+                        
+                        <div class="space-y-5 text-choco-500 font-medium leading-relaxed text-lg">
                             <p>
-                                Somos especializados em transformar os seus momentos especiais em memórias deliciosas. Trabalhamos com encomendas de <strong>bolos decorados e doces em geral</strong>, tudo feito com ingredientes de alta qualidade, capricho e muito amor.
+                                Como diz o nosso lema: <strong class="text-strawberry-600">"Com açúcar e afeto fazemos o seu doce predileto"</strong>. Somos especializados em transformar os seus momentos especiais em memórias deliciosas.
                             </p>
                             <p>
-                                Estamos localizados no bairro <strong>Jardim Tropical, em Cuiabá</strong>, e atendemos também a região de Várzea Grande.
+                                Trabalhamos com encomendas de <strong>bolos decorados e doces em geral</strong>, tudo feito com ingredientes de alta qualidade, capricho e muito amor. Estamos localizados no bairro <strong>Jardim Tropical, em Cuiabá</strong>.
                             </p>
-                            <p class="font-semibold text-sweet-600 bg-sweet-50 p-4 rounded-xl border border-sweet-100">
-                                Para garantir um atendimento 100% personalizado e atenção total aos detalhes do seu pedido, realizamos nossos orçamentos exclusivamente pelo WhatsApp.
-                            </p>
+                            <div class="bg-vanilla-dark p-5 rounded-2xl border-l-4 border-strawberry-500 mt-6">
+                                <p class="font-bold text-choco-600 flex items-start gap-3">
+                                    <i class="ph-fill ph-info text-2xl text-strawberry-500 shrink-0"></i>
+                                    Para garantir um atendimento 100% personalizado e atenção total aos detalhes da sua festa, realizamos nossos orçamentos exclusivamente pelo WhatsApp.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Brigadeiros gourmet" class="rounded-2xl w-full h-48 object-cover shadow-md hover:scale-105 transition-transform duration-500">
-                        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ingredientes de alta qualidade" class="rounded-2xl w-full h-48 object-cover shadow-md mt-8 hover:scale-105 transition-transform duration-500">
+                        <!-- Imagens simulando o feed do instagram dela -->
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bolo decorado festivo" class="rounded-[2rem] w-full h-56 object-cover shadow-md border-4 border-white hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Docinhos artesanais" class="rounded-[2rem] w-full h-56 object-cover shadow-md border-4 border-white mt-8 hover:-translate-y-2 transition-transform duration-300">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NOSSOS PRODUTOS / GALERIA -->
-    <section id="produtos" class="py-24">
+    <!-- NOSSOS PRODUTOS / VITRINE -->
+    <section id="produtos" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-sweet-500 font-bold tracking-widest uppercase text-sm mb-2">O que fazemos</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-choco-900 mb-4">Especialidades da Casa</h3>
-                <p class="text-choco-800/70">De bolos de mesversário a docinhos tradicionais, preparamos tudo fresco e sob medida para sua comemoração.</p>
+                <i class="ph-fill ph-magic-wand text-4xl text-strawberry-500 mb-2"></i>
+                <h2 class="text-4xl md:text-5xl font-black text-choco-600 mb-4">Nossas <span class="text-strawberry-500 font-cursive font-normal">Delícias</span></h2>
+                <p class="text-choco-500 font-medium text-lg">Tudo fresquinho, feito sob encomenda especialmente para a sua comemoração.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Card 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-sweet-50 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-64 overflow-hidden relative">
-                        <!-- Imagem ilustrativa de bolo infantil/mesversario -->
-                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolos Decorados e Temáticos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <!-- Categoria 1 -->
+                <div class="bg-vanilla rounded-[2rem] p-6 border border-vanilla-dark shadow-sm hover:shadow-sweet transition-shadow duration-300 group text-center">
+                    <div class="w-full h-60 rounded-[1.5rem] overflow-hidden mb-6 border-4 border-white shadow-inner">
+                        <!-- Placeholder que remete aos bolos temáticos dela (ex: bolo amarelo com topper) -->
+                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolos Decorados" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
-                    <div class="p-8">
-                        <div class="w-12 h-12 bg-sweet-100 text-sweet-500 rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="cake-slice" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-choco-900 mb-3">Bolos Decorados</h4>
-                        <p class="text-choco-800/70 mb-6">Bolos temáticos perfeitos para aniversários, mesversários e celebrações. Topper personalizado, cobertura em chantininho e massa fofinha.</p>
-                        <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20orçar%20um%20Bolo%20Decorado." target="_blank" class="text-sweet-500 font-bold flex items-center gap-2 hover:text-sweet-600 transition-colors">
-                            Orçar Bolo <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
+                    <h4 class="text-2xl font-black text-choco-600 mb-3">Bolos Decorados</h4>
+                    <p class="text-choco-500 font-medium mb-6">Bolos temáticos com toppers personalizados para aniversários infantis, mesversários e datas especiais. Coberturas perfeitas e massa fofinha.</p>
+                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20ver%20modelos%20de%20bolos%20decorados." target="_blank" class="inline-flex items-center gap-2 bg-white text-strawberry-600 border-2 border-strawberry-200 px-6 py-2 rounded-full font-bold hover:bg-strawberry-50 transition-colors">
+                        Pedir Orçamento <i class="ph-bold ph-caret-right"></i>
+                    </a>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-sweet-50 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-64 overflow-hidden relative">
-                        <!-- Imagem ilustrativa de caixa de doces -->
-                        <img src="https://images.unsplash.com/photo-1614088058728-66cf575d5be5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Caixas de Doces Tradicionais" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <!-- Categoria 2 -->
+                <div class="bg-vanilla rounded-[2rem] p-6 border border-vanilla-dark shadow-sm hover:shadow-sweet transition-shadow duration-300 group text-center mt-0 md:mt-8">
+                    <div class="w-full h-60 rounded-[1.5rem] overflow-hidden mb-6 border-4 border-white shadow-inner">
+                        <!-- Placeholder que remete a docinhos tradicionais/caixinhas -->
+                        <img src="https://images.unsplash.com/photo-1614088058728-66cf575d5be5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Doces para Festas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
-                    <div class="p-8">
-                        <div class="w-12 h-12 bg-sweet-100 text-sweet-500 rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="cookie" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-choco-900 mb-3">Doces Tradicionais</h4>
-                        <p class="text-choco-800/70 mb-6">Caixinhas para presentear ou centos para festas. Brigadeiro, beijinho, ninho com nutella, dois amores, brownie e muito mais.</p>
-                        <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20orçar%20docinhos." target="_blank" class="text-sweet-500 font-bold flex items-center gap-2 hover:text-sweet-600 transition-colors">
-                            Orçar Doces <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
+                    <h4 class="text-2xl font-black text-choco-600 mb-3">Doces para Festa</h4>
+                    <p class="text-choco-500 font-medium mb-6">Centos de docinhos tradicionais para adoçar a mesa dos convidados. Brigadeiros, beijinhos, casadinhos, ninho e muito mais opções.</p>
+                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20tabela%20de%20docinhos." target="_blank" class="inline-flex items-center gap-2 bg-white text-strawberry-600 border-2 border-strawberry-200 px-6 py-2 rounded-full font-bold hover:bg-strawberry-50 transition-colors">
+                        Pedir Orçamento <i class="ph-bold ph-caret-right"></i>
+                    </a>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-sweet-50 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-64 overflow-hidden relative">
-                        <!-- Imagem ilustrativa de produtos de natal/panetone -->
-                        <img src="https://images.unsplash.com/photo-1608404285854-94c034a781b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Datas Comemorativas e Chocotones" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <!-- Categoria 3 -->
+                <div class="bg-vanilla rounded-[2rem] p-6 border border-vanilla-dark shadow-sm hover:shadow-sweet transition-shadow duration-300 group text-center">
+                    <div class="w-full h-60 rounded-[1.5rem] overflow-hidden mb-6 border-4 border-white shadow-inner">
+                        <!-- Placeholder que remete a chocotones/panetones/datas festivas -->
+                        <img src="https://images.unsplash.com/photo-1608404285854-94c034a781b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Datas Comemorativas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
-                    <div class="p-8">
-                        <div class="w-12 h-12 bg-sweet-100 text-sweet-500 rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="gift" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-choco-900 mb-3">Datas Comemorativas</h4>
-                        <p class="text-choco-800/70 mb-6">Kits especiais de Natal, Páscoa, Dia das Mães... Panetones e Chocotones super recheados para presentear quem você ama.</p>
-                        <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20para%20datas%20comemorativas." target="_blank" class="text-sweet-500 font-bold flex items-center gap-2 hover:text-sweet-600 transition-colors">
-                            Ver Opções <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
+                    <h4 class="text-2xl font-black text-choco-600 mb-3">Kits Comemorativos</h4>
+                    <p class="text-choco-500 font-medium mb-6">Trabalhamos com opções especiais para datas festivas. Caixas presenteáveis, Panetones e Chocotones recheados e guirlandas de brigadeiro.</p>
+                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20saber%20sobre%20kits%20especiais." target="_blank" class="inline-flex items-center gap-2 bg-white text-strawberry-600 border-2 border-strawberry-200 px-6 py-2 rounded-full font-bold hover:bg-strawberry-50 transition-colors">
+                        Saber Mais <i class="ph-bold ph-caret-right"></i>
+                    </a>
                 </div>
 
             </div>
             
-            <div class="mt-12 text-center">
-                <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sweet-600 font-bold hover:text-sweet-700 transition-colors">
-                    <i data-lucide="instagram" class="w-5 h-5"></i> Veja mais do nosso portfólio no Instagram
+            <div class="mt-16 text-center">
+                <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-md">
+                    <i class="ph-bold ph-instagram-logo text-2xl"></i> Veja as fotos reais no nosso Instagram
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- COMO ENCOMENDAR & INFOS -->
-    <section id="encomendas" class="py-20 bg-sweet-500 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZWM0ODk5Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZjRiY2U1IiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] opacity-20 mix-blend-overlay"></div>
+    <!-- INFORMAÇÕES PRÁTICAS & HORÁRIOS (FUNDO CHOCOLATE) -->
+    <section id="encomendas" class="py-24 bg-choco-900 relative">
+        <!-- Textura de fundo sutil -->
+        <div class="absolute inset-0 opacity-10" style="background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #422214 10px ), repeating-linear-gradient( #5C332255, #5C3322 );"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 border-4 border-white/20">
-                <div class="text-center mb-12">
-                    <h3 class="font-cursive text-4xl md:text-5xl text-sweet-500 mb-3">Como encomendar?</h3>
-                    <p class="text-choco-800 font-medium">Trabalhamos apenas sob encomenda e agendamento.</p>
+            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-4">Faça sua <span class="text-strawberry-500 font-cursive font-normal">Encomenda</span></h2>
+                <p class="text-choco-400 font-medium text-lg">Adoce seu dia com facilidade. Siga os passos abaixo:</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Passo 1 -->
+                <div class="bg-choco-600/50 border border-choco-500 rounded-3xl p-8 text-center relative">
+                    <div class="w-16 h-16 bg-strawberry-500 text-white rounded-full flex items-center justify-center text-2xl font-black absolute -top-8 left-1/2 transform -translate-x-1/2 border-4 border-choco-900 shadow-md">1</div>
+                    <i class="ph-fill ph-whatsapp-logo text-5xl text-strawberry-300 mt-6 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Chame no Zap</h3>
+                    <p class="text-choco-400 font-medium">Todos os orçamentos e pedidos são fechados com exclusividade pelo WhatsApp.</p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative">
-                    <!-- Linha conectora desktop -->
-                    <div class="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-sweet-100 -z-10"></div>
-
-                    <div class="bg-white px-6">
-                        <div class="w-16 h-16 bg-sweet-100 text-sweet-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-md border-4 border-white">1</div>
-                        <h4 class="font-bold text-choco-900 text-lg mb-2">Chame no WhatsApp</h4>
-                        <p class="text-sm text-choco-800/70">Clique em qualquer botão do site para iniciar a conversa.</p>
-                    </div>
-
-                    <div class="bg-white px-6">
-                        <div class="w-16 h-16 bg-sweet-100 text-sweet-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-md border-4 border-white">2</div>
-                        <h4 class="font-bold text-choco-900 text-lg mb-2">Personalize o Pedido</h4>
-                        <p class="text-sm text-choco-800/70">Defina o tamanho, sabor, tema do bolo ou quantidade de doces.</p>
-                    </div>
-
-                    <div class="bg-white px-6">
-                        <div class="w-16 h-16 bg-sweet-100 text-sweet-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-md border-4 border-white">3</div>
-                        <h4 class="font-bold text-choco-900 text-lg mb-2">Agende a Data</h4>
-                        <p class="text-sm text-choco-800/70">Escolha entre retirada na loja ou entrega (Cuiabá e Várzea Grande).</p>
-                    </div>
+                <!-- Passo 2 -->
+                <div class="bg-choco-600/50 border border-choco-500 rounded-3xl p-8 text-center relative">
+                    <div class="w-16 h-16 bg-strawberry-500 text-white rounded-full flex items-center justify-center text-2xl font-black absolute -top-8 left-1/2 transform -translate-x-1/2 border-4 border-choco-900 shadow-md">2</div>
+                    <i class="ph-fill ph-calendar-check text-5xl text-strawberry-300 mt-6 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Agende com Antecedência</h3>
+                    <p class="text-choco-400 font-medium">Trabalhamos apenas sob encomenda. É necessário fazer agendamento prévio da data.</p>
                 </div>
-
-                <div class="mt-12 flex justify-center">
-                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20agendar%20uma%20encomenda." target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-green-500/30 flex items-center gap-3 hover:scale-105">
-                        <i data-lucide="message-circle" class="w-6 h-6"></i> Iniciar meu Pedido
-                    </a>
+                <!-- Passo 3 -->
+                <div class="bg-choco-600/50 border border-choco-500 rounded-3xl p-8 text-center relative">
+                    <div class="w-16 h-16 bg-strawberry-500 text-white rounded-full flex items-center justify-center text-2xl font-black absolute -top-8 left-1/2 transform -translate-x-1/2 border-4 border-choco-900 shadow-md">3</div>
+                    <i class="ph-fill ph-storefront text-5xl text-strawberry-300 mt-6 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Retirada ou Entrega</h3>
+                    <p class="text-choco-400 font-medium">Você pode retirar no local ou consultar a taxa de entrega para Cuiabá e Várzea Grande.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- INFORMAÇÕES DE LOCALIZAÇÃO E HORÁRIO -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <!-- Box Branco com Horários e Endereço -->
+            <div class="bg-white rounded-[2rem] p-8 lg:p-12 shadow-2xl flex flex-col md:flex-row gap-12">
                 
-                <!-- Contatos e Horários -->
-                <div>
-                    <h3 class="text-3xl font-bold text-choco-900 mb-8">Informações Úteis</h3>
+                <!-- Contato e Endereço -->
+                <div class="md:w-1/2 space-y-8">
+                    <h3 class="text-2xl font-black text-choco-600 mb-6">Onde estamos</h3>
                     
-                    <div class="space-y-8">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-sweet-50 p-3 rounded-xl text-sweet-500 shrink-0">
-                                <i data-lucide="map-pin" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-choco-900 text-lg mb-1">Retirada na Loja</h4>
-                                <p class="text-choco-800/70 leading-relaxed mb-2">
-                                    Avenida Europa, Casa 09 - Quadra 10<br>
-                                    Jardim Tropical, Cuiabá - MT<br>
-                                    CEP: 78065-130
-                                </p>
-                                <a href="https://maps.google.com/?q=Avenida+Europa+Casa+09+Quadra+10+Jardim+Tropical+Cuiaba+MT" target="_blank" class="text-sweet-500 font-semibold text-sm hover:underline">Ver no Mapa &rarr;</a>
-                            </div>
+                    <div class="flex gap-4">
+                        <div class="bg-vanilla p-3 rounded-full h-fit text-strawberry-500">
+                            <i class="ph-fill ph-map-pin text-2xl"></i>
                         </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="bg-sweet-50 p-3 rounded-xl text-sweet-500 shrink-0">
-                                <i data-lucide="truck" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-choco-900 text-lg mb-1">Área de Cobertura</h4>
-                                <p class="text-choco-800/70 leading-relaxed">
-                                    Realizamos entregas com agendamento prévio para as cidades de <strong>Cuiabá</strong> e <strong>Várzea Grande</strong>.
-                                </p>
-                            </div>
+                        <div>
+                            <h4 class="font-bold text-choco-600 text-lg">Retirada na Loja</h4>
+                            <p class="text-choco-500 font-medium leading-relaxed mt-1">
+                                Avenida Europa, Casa 09 - Quadra 10<br>
+                                Jardim Tropical, Cuiabá - MT<br>
+                                CEP: 78065-130
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="bg-sweet-50 p-3 rounded-xl text-sweet-500 shrink-0">
-                                <i data-lucide="credit-card" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-choco-900 text-lg mb-1">Formas de Pagamento</h4>
-                                <p class="text-choco-800/70 leading-relaxed">
-                                    Aceitamos cartões de débito, crédito e Pix. <br>
-                                    <span class="text-sm italic">(Não aceitamos apenas dinheiro físico)</span>
-                                </p>
-                            </div>
+                    <div class="flex gap-4">
+                        <div class="bg-vanilla p-3 rounded-full h-fit text-strawberry-500">
+                            <i class="ph-fill ph-moped text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-choco-600 text-lg">Área de Cobertura</h4>
+                            <p class="text-choco-500 font-medium mt-1">Entregas em Cuiabá e Várzea Grande mediante taxa. Consulte pelo WhatsApp.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="bg-vanilla p-3 rounded-full h-fit text-strawberry-500">
+                            <i class="ph-fill ph-credit-card text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-choco-600 text-lg">Pagamentos</h4>
+                            <p class="text-choco-500 font-medium mt-1">Aceitamos Pix, Cartão de Crédito e Débito.<br><span class="text-sm italic">(Não aceitamos pagamentos apenas em dinheiro físico).</span></p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Horários de Funcionamento -->
-                <div class="bg-sweet-50 rounded-3xl p-8 lg:p-10 border border-sweet-100">
-                    <h3 class="text-2xl font-bold text-choco-900 mb-6 flex items-center gap-3">
-                        <i data-lucide="clock" class="text-sweet-500"></i> Horário de Atendimento
+                <!-- Divisor -->
+                <div class="hidden md:block w-px bg-vanilla-dark"></div>
+
+                <!-- Horários -->
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-black text-choco-600 mb-6 flex items-center gap-2">
+                        <i class="ph-fill ph-clock text-strawberry-500"></i> Horário de Atendimento
                     </h3>
                     
-                    <ul class="space-y-4 text-choco-800">
-                        <li class="flex justify-between border-b border-sweet-200/50 pb-3">
-                            <span class="font-medium">Segunda a Quinta</span>
-                            <div class="text-right text-sm">
-                                <span>08:30 às 12:00</span><br>
-                                <span>14:00 às 18:30</span>
-                            </div>
-                        </li>
-                        <li class="flex justify-between border-b border-sweet-200/50 pb-3">
-                            <span class="font-medium">Sexta-feira</span>
-                            <div class="text-right text-sm">
-                                <span>08:30 às 12:00</span><br>
-                                <span>14:00 às 17:00</span>
-                            </div>
-                        </li>
-                        <li class="flex justify-between border-b border-sweet-200/50 pb-3">
-                            <span class="font-medium">Sábado</span>
-                            <div class="text-right text-sm">
-                                <span>08:30 às 12:00</span><br>
-                                <span>14:00 às 16:00</span>
-                            </div>
-                        </li>
-                        <li class="flex justify-between pt-1">
-                            <span class="font-medium">Domingo</span>
-                            <span class="text-sweet-500 font-bold text-sm">Fechado</span>
-                        </li>
-                    </ul>
-                    <div class="mt-6 bg-white p-4 rounded-xl border border-sweet-100 text-center">
-                        <p class="text-xs text-choco-800/60 uppercase tracking-widest font-bold">Lembre-se</p>
-                        <p class="text-sm font-semibold text-choco-900 mt-1">O agendamento é obrigatório para retiradas.</p>
+                    <div class="bg-vanilla rounded-2xl p-6 border border-vanilla-dark">
+                        <ul class="space-y-4 text-choco-600 font-bold">
+                            <li class="flex justify-between border-b border-strawberry-200 pb-3 items-center">
+                                <span>Segunda a Quinta</span>
+                                <div class="text-right text-sm text-choco-500 font-medium">
+                                    <span>08:30 às 12:00</span><br>
+                                    <span>14:00 às 18:30</span>
+                                </div>
+                            </li>
+                            <li class="flex justify-between border-b border-strawberry-200 pb-3 items-center">
+                                <span>Sexta-feira</span>
+                                <div class="text-right text-sm text-choco-500 font-medium">
+                                    <span>08:30 às 12:00</span><br>
+                                    <span>14:00 às 17:00</span>
+                                </div>
+                            </li>
+                            <li class="flex justify-between border-b border-strawberry-200 pb-3 items-center">
+                                <span>Sábado</span>
+                                <div class="text-right text-sm text-choco-500 font-medium">
+                                    <span>08:30 às 12:00</span><br>
+                                    <span>14:00 às 16:00</span>
+                                </div>
+                            </li>
+                            <li class="flex justify-between pt-1 items-center">
+                                <span>Domingo</span>
+                                <span class="bg-strawberry-100 text-strawberry-600 px-3 py-1 rounded-lg text-sm">Fechado</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -476,32 +458,28 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-sweet-50 border-t border-sweet-100 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-sweet-200 rounded-full flex items-center justify-center text-sweet-600">
-                        <i data-lucide="cake" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <span class="font-bold text-xl leading-none text-choco-900 tracking-tight block">Doces Sonhos</span>
-                        <span class="font-cursive text-sm text-sweet-600 block mt-1">Com açúcar e afeto...</span>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-sweet-500 shadow-sm border border-sweet-100 hover:bg-sweet-500 hover:text-white transition-colors" aria-label="Siga no Instagram">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://wa.me/5565992199792" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-sweet-500 shadow-sm border border-sweet-100 hover:bg-green-500 hover:border-green-500 hover:text-white transition-colors" aria-label="Fale no WhatsApp">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
-                    </a>
+    <footer class="bg-vanilla pt-12 pb-6 border-t border-strawberry-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            
+            <div class="flex items-center gap-3">
+                <i class="ph-fill ph-cake text-3xl text-strawberry-500"></i>
+                <div class="flex flex-col">
+                    <span class="font-cursive text-xl leading-none text-strawberry-600">Doces Sonhos</span>
+                    <span class="text-[10px] text-choco-500 font-bold uppercase tracking-widest mt-1">Cuiabá - MT</span>
                 </div>
             </div>
 
-            <div class="border-t border-sweet-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-choco-800/60">
-                <p>&copy; 2026 Doceria Doces Sonhos. Todos os direitos reservados.</p>
-                <p>Feito com ❤️ no Jardim Tropical.</p>
+            <p class="text-choco-400 font-medium text-sm">
+                &copy; 2026 Doceria Doces Sonhos. Todos os direitos reservados.
+            </p>
+
+            <div class="flex gap-3">
+                <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-strawberry-500 shadow-sm border border-strawberry-200 hover:bg-strawberry-500 hover:text-white transition-colors text-xl">
+                    <i class="ph-fill ph-instagram-logo"></i>
+                </a>
+                <a href="https://wa.me/5565992199792" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#25D366] shadow-sm border border-strawberry-200 hover:bg-[#25D366] hover:text-white transition-colors text-xl">
+                    <i class="ph-fill ph-whatsapp-logo"></i>
+                </a>
             </div>
         </div>
     </footer>
@@ -509,19 +487,16 @@
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/5565992199792?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." 
        target="_blank" rel="noopener noreferrer" 
-       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] flex items-center justify-center hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300 group"
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-[#1ebd5a] hover:scale-110 transition-all duration-300 group"
        aria-label="Fale conosco no WhatsApp">
-        <i data-lucide="message-circle" class="w-7 h-7"></i>
-        <span class="absolute right-full mr-4 bg-white text-choco-900 text-sm font-bold px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg border border-sweet-50">
-            Faça sua Encomenda! 🎂
+        <i class="ph-bold ph-whatsapp text-3xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-choco-600 text-sm font-extrabold px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-sweet border-2 border-strawberry-100">
+            Fazer Encomenda! 🎂
         </span>
     </a>
 
-    <!-- SCRIPT ÍCONES E MENU -->
+    <!-- SCRIPT MENU MOBILE -->
     <script>
-        lucide.createIcons();
-
-        // Lógica do Menu Mobile
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const links = document.querySelectorAll('.mobile-link');
