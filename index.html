@@ -7,7 +7,57 @@
     <!-- Meta Tags Básicas de SEO Local -->
     <title>Doceria Doces Sonhos | Bolos Decorados em Cuiabá</title>
     <meta name="description" content="Com açúcar e afeto fazemos o seu doce predileto! Bolos decorados, tortas e doces artesanais sob encomenda em Cuiabá e Várzea Grande. Peça pelo WhatsApp!">
+    <meta name="keywords" content="doceria em cuiaba, bolos decorados cuiaba, tortas doces, docinhos para festa, doceria jardim tropical, confeitaria cuiaba, doces artesanais">
+    <meta name="author" content="Doceria Doces Sonhos">
     
+    <!-- Open Graph (Compartilhamento Perfeito no WhatsApp e Redes Sociais) -->
+    <meta property="og:type" content="restaurant.bakery">
+    <meta property="og:title" content="Doceria Doces Sonhos | Bolos e Doces em Cuiabá">
+    <meta property="og:description" content="Com açúcar e afeto fazemos o seu doce predileto! Encomende bolos artesanais e doces para sua festa.">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Schema Markup (JSON-LD) para o Google Local (Acelera a aprovação do Google Maps) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Doceria Doces Sonhos",
+      "image": "https://www.instagram.com/docessonhos.tortasedoces/",
+      "description": "Especializados em transformar os seus momentos especiais em memórias deliciosas. Trabalhamos com encomendas de bolos decorados e doces em geral em Cuiabá e Várzea Grande.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Europa, Casa 09 - Quadra 10, Jardim Tropical",
+        "addressLocality": "Cuiabá",
+        "addressRegion": "MT",
+        "postalCode": "78065-130",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5565992199792",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "08:30",
+          "closes": "18:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "08:30",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:30",
+          "closes": "16:00"
+        }
+      ],
+      "url": "https://www.instagram.com/docessonhos.tortasedoces/"
+    }
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -135,16 +185,16 @@
 
                 <!-- Botão WhatsApp Desktop -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="text-strawberry-500 hover:text-strawberry-600 transition-colors text-2xl">
+                    <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Doceria" class="text-strawberry-500 hover:text-strawberry-600 transition-colors text-2xl">
                         <i class="ph-fill ph-instagram-logo"></i>
                     </a>
-                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#1ebd5a] text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:-translate-y-1 shadow-sweet flex items-center gap-2">
+                    <a href="https://wa.me/5565992199792?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" aria-label="Fazer orçamento no WhatsApp" class="bg-[#25D366] hover:bg-[#1ebd5a] text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:-translate-y-1 shadow-sweet flex items-center gap-2">
                         <i class="ph-fill ph-whatsapp-logo text-lg"></i> Fazer Orçamento
                     </a>
                 </div>
 
                 <!-- Botão Menu Mobile -->
-                <button id="mobile-menu-btn" class="md:hidden text-strawberry-600 p-2 bg-strawberry-100 rounded-xl">
+                <button id="mobile-menu-btn" aria-label="Abrir menu principal" class="md:hidden text-strawberry-600 p-2 bg-strawberry-100 rounded-xl">
                     <i class="ph-bold ph-list text-2xl"></i>
                 </button>
             </div>
@@ -268,9 +318,9 @@
                     <div class="grid grid-cols-2 gap-4">
                         <!-- Imagens simulando o feed do instagram dela -->
                         <!-- COLE AQUI A FOTO 2 -->
-                        <img src="./sobre-1.jpg" onerror="this.src='https://placehold.co/500x500/FFE4E8/FF5C81?text=Foto+Feed+1'" alt="Bolo decorado festivo" class="rounded-[2rem] w-full h-56 object-cover shadow-md border-4 border-white hover:-translate-y-2 transition-transform duration-300">
+                        <img src="sobre-1.jpg" onerror="this.src='https://placehold.co/500x500/FFE4E8/FF5C81?text=Foto+Feed+1'" alt="Bolo decorado festivo" loading="lazy" class="rounded-[2rem] w-full h-56 object-cover shadow-md border-4 border-white hover:-translate-y-2 transition-transform duration-300">
                         <!-- COLE AQUI A FOTO 3 -->
-                        <img src="./sobre-2.jpg" onerror="this.src='https://placehold.co/500x500/FFE4E8/FF5C81?text=Foto+Feed+2'" alt="Docinhos artesanais" class="rounded-[2rem] w-full h-56 object-cover shadow-md border-4 border-white mt-8 hover:-translate-y-2 transition-transform duration-300">
+                        <img src="sobre-2.jpg" onerror="this.src='https://placehold.co/500x500/FFE4E8/FF5C81?text=Foto+Feed+2'" alt="Docinhos artesanais" loading="lazy" class="rounded-[2rem] w-full h-56 object-cover shadow-md border-4 border-white mt-8 hover:-translate-y-2 transition-transform duration-300">
                     </div>
                 </div>
             </div>
@@ -292,7 +342,7 @@
                 <div class="bg-vanilla rounded-[2rem] p-6 border border-vanilla-dark shadow-sm hover:shadow-sweet transition-shadow duration-300 group text-center">
                     <div class="w-full h-60 rounded-[1.5rem] overflow-hidden mb-6 border-4 border-white shadow-inner">
                         <!-- COLE AQUI A FOTO DE UM BOLO DECORADO INFANTIL/FESTA -->
-                        <img src="./vitrine-bolos.jpg" onerror="this.src='https://placehold.co/800x600/FFE4E8/FF5C81?text=Foto+Bolo+Decorado'" alt="Bolos Decorados" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="vitrine-bolos.jpg" onerror="this.src='https://placehold.co/800x600/FFE4E8/FF5C81?text=Foto+Bolo+Decorado'" alt="Bolos Decorados" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <h4 class="text-2xl font-black text-choco-600 mb-3">Bolos Decorados</h4>
                     <p class="text-choco-500 font-medium mb-6">Bolos temáticos com toppers personalizados para aniversários infantis, mesversários e datas especiais. Coberturas perfeitas e massa fofinha.</p>
@@ -305,7 +355,7 @@
                 <div class="bg-vanilla rounded-[2rem] p-6 border border-vanilla-dark shadow-sm hover:shadow-sweet transition-shadow duration-300 group text-center mt-0 md:mt-8">
                     <div class="w-full h-60 rounded-[1.5rem] overflow-hidden mb-6 border-4 border-white shadow-inner">
                         <!-- COLE AQUI A FOTO DA CAIXA DE DOCINHOS DE R$20 -->
-                        <img src="./vitrine-doces.jpg" onerror="this.src='https://placehold.co/800x600/FFE4E8/FF5C81?text=Foto+Caixa+de+Doces'" alt="Doces para Festas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="vitrine-doces.jpg" onerror="this.src='https://placehold.co/800x600/FFE4E8/FF5C81?text=Foto+Caixa+de+Doces'" alt="Doces para Festas" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <h4 class="text-2xl font-black text-choco-600 mb-3">Doces para Festa</h4>
                     <p class="text-choco-500 font-medium mb-6">Centos de docinhos tradicionais para adoçar a mesa dos convidados. Brigadeiros, beijinhos, casadinhos, ninho e muito mais opções.</p>
@@ -318,7 +368,7 @@
                 <div class="bg-vanilla rounded-[2rem] p-6 border border-vanilla-dark shadow-sm hover:shadow-sweet transition-shadow duration-300 group text-center">
                     <div class="w-full h-60 rounded-[1.5rem] overflow-hidden mb-6 border-4 border-white shadow-inner">
                         <!-- COLE AQUI A FOTO DOS PANETONES/CHOCOTONES DE NATAL -->
-                        <img src="./vitrine-kits.jpg" onerror="this.src='https://placehold.co/800x600/FFE4E8/FF5C81?text=Foto+Panetones'" alt="Datas Comemorativas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="vitrine-kits.jpg" onerror="this.src='https://placehold.co/800x600/FFE4E8/FF5C81?text=Foto+Panetones'" alt="Datas Comemorativas" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <h4 class="text-2xl font-black text-choco-600 mb-3">Kits Comemorativos</h4>
                     <p class="text-choco-500 font-medium mb-6">Trabalhamos com opções especiais para datas festivas. Caixas presenteáveis, Panetones e Chocotones recheados e guirlandas de brigadeiro.</p>
@@ -476,10 +526,10 @@
             </p>
 
             <div class="flex gap-3">
-                <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-strawberry-500 shadow-sm border border-strawberry-200 hover:bg-strawberry-500 hover:text-white transition-colors text-xl">
+                <a href="https://www.instagram.com/docessonhos.tortasedoces/" target="_blank" rel="noopener noreferrer" aria-label="Nosso Instagram" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-strawberry-500 shadow-sm border border-strawberry-200 hover:bg-strawberry-500 hover:text-white transition-colors text-xl">
                     <i class="ph-fill ph-instagram-logo"></i>
                 </a>
-                <a href="https://wa.me/5565992199792" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#25D366] shadow-sm border border-strawberry-200 hover:bg-[#25D366] hover:text-white transition-colors text-xl">
+                <a href="https://wa.me/5565992199792" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#25D366] shadow-sm border border-strawberry-200 hover:bg-[#25D366] hover:text-white transition-colors text-xl">
                     <i class="ph-fill ph-whatsapp-logo"></i>
                 </a>
             </div>
